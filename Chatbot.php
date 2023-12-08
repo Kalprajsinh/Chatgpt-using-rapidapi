@@ -64,7 +64,6 @@
         <div class="chat-box-header">Chatbot</div>
         <div class="chat-box-body" id="chat-box-body">
             
-
         <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -108,16 +107,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo $data['response'];
   }
+  else
+  {
+    echo "
+        <hr>    
+        AI : Hello! How can I assist you today?
+        <hr>
+        ";
+  }
 ?>
         </div>
     </div>
 
     <div class="input-group">
         <form action="#" method="post">
-            <input type="text" class="form-control" name="message" placeholder="Type your message...">
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Send</button>
-            </div>
+            <table>
+            <tr>
+            <th><input type="text" class="form-control" style="width: 500px;" name="message" placeholder="Type your message..."></th>
+            <th><button type="submit" class="btn btn-primary"  style="width: 100px;" >Send</button></th>
+            </tr>
+            </table>
+            
+
         </form>
     </div>
 </div>
